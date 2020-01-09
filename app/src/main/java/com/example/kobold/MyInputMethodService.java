@@ -11,6 +11,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class MyInputMethodService extends android.inputmethodservice.InputMethodService implements KeyboardView.OnKeyboardActionListener {
@@ -21,7 +24,7 @@ public class MyInputMethodService extends android.inputmethodservice.InputMethod
     private PlaybackParams params;
 
     private boolean caps = false;
-    private int resources[] = new int[]{R.raw.kazooie1, R.raw.kazooie2};
+    private int resources[] = new int[]{};
 
     {
         params = new PlaybackParams();
@@ -34,6 +37,7 @@ public class MyInputMethodService extends android.inputmethodservice.InputMethod
         keyboard = new Keyboard(this, R.xml.keys_layout);
         keyboardView.setKeyboard(keyboard);
         keyboardView.setOnKeyboardActionListener(this);
+        // TODO: pull config
         mp = MediaPlayer.create(getApplicationContext(), R.raw.kazooie1);
         mp.setPlaybackParams(params);
         am = (AudioManager)getSystemService(AUDIO_SERVICE);

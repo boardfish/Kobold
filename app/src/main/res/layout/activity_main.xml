@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/instruction_text"
+        android:id="@+id/instructionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -16,27 +16,27 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Spinner
-        android:id="@+id/soundpack_select"
+        android:id="@+id/soundpackSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/instruction_text"
+        app:layout_constraintTop_toBottomOf="@id/instructionText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:entries="@array/soundpacks"
         />
     <TextView
-        android:id="@+id/soundpack_select_label"
+        android:id="@+id/soundpackSelectLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Soundpack"
-        app:layout_constraintRight_toLeftOf="@+id/soundpack_select"
-        app:layout_constraintTop_toBottomOf="@id/instruction_text"
+        app:layout_constraintRight_toLeftOf="@+id/soundpackSelect"
+        app:layout_constraintTop_toBottomOf="@id/instructionText"
         />
     <!-- Important note about seekbars - min cannot be changed, so it's subtracted in code. Value is
          also an int, so we divide to cast back to a float.
      -->
     <SeekBar
-        android:id="@+id/pitch_offset_slider"
+        android:id="@+id/pitchOffsetSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -45,17 +45,17 @@
         android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/soundpack_select" />
+        app:layout_constraintTop_toBottomOf="@id/soundpackSelect" />
     <TextView
-        android:id="@+id/pitch_offset_label"
+        android:id="@+id/pitchOffsetLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pitch offset"
-        app:layout_constraintRight_toLeftOf="@+id/pitch_offset_slider"
-        app:layout_constraintTop_toTopOf="@id/pitch_offset_slider"
+        app:layout_constraintRight_toLeftOf="@+id/pitchOffsetSlider"
+        app:layout_constraintTop_toTopOf="@id/pitchOffsetSlider"
         />
     <SeekBar
-        android:id="@+id/pitch_variation_slider"
+        android:id="@+id/pitchVariationSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -64,17 +64,17 @@
         android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pitch_offset_slider" />
+        app:layout_constraintTop_toBottomOf="@id/pitchOffsetSlider" />
     <TextView
-        android:id="@+id/pitch_variation_label"
+        android:id="@+id/pitchVariationLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pitch variation"
-        app:layout_constraintRight_toLeftOf="@+id/pitch_variation_slider"
-        app:layout_constraintTop_toTopOf="@id/pitch_variation_slider"
+        app:layout_constraintRight_toLeftOf="@+id/pitchVariationSlider"
+        app:layout_constraintTop_toTopOf="@id/pitchVariationSlider"
         />
     <SeekBar
-        android:id="@+id/speed_offset_slider"
+        android:id="@+id/speedOffsetSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -83,17 +83,17 @@
         android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pitch_variation_slider" />
+        app:layout_constraintTop_toBottomOf="@id/pitchVariationSlider" />
     <TextView
-        android:id="@+id/speed_offset_label"
+        android:id="@+id/speedOffsetLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speed offset"
-        app:layout_constraintRight_toLeftOf="@+id/speed_offset_slider"
-        app:layout_constraintTop_toTopOf="@id/speed_offset_slider"
+        app:layout_constraintRight_toLeftOf="@+id/speedOffsetSlider"
+        app:layout_constraintTop_toTopOf="@id/speedOffsetSlider"
         />
     <SeekBar
-        android:id="@+id/speed_variation_slider"
+        android:id="@+id/speedVarationSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -102,13 +102,13 @@
         android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/speed_offset_slider" />
+        app:layout_constraintTop_toBottomOf="@id/speedOffsetSlider" />
     <TextView
         android:id="@+id/speed_variation_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pitch variation"
-        app:layout_constraintRight_toLeftOf="@+id/speed_variation_slider"
-        app:layout_constraintTop_toTopOf="@id/speed_variation_slider"
+        app:layout_constraintRight_toLeftOf="@+id/speedVarationSlider"
+        app:layout_constraintTop_toTopOf="@id/speedVarationSlider"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
